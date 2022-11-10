@@ -1,50 +1,10 @@
 debug: true
 
-server:
-  port: 1012
-  servlet:
-    context-path: /api
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1000/eureka/
-
-# keycloak config set up v10.0.2
-keycloak:
-  auth-server-url: http://localhost:8080/auth
-  realm: blu-micro
-  bearer-only: true
-  principal-attribute: preferred_username
-  ssl-required: none
-  use-resource-role-mappings: true
-  resource: blu-micro-user
-  credentials:
-    secret: 9ac51cca-0cb8-4a3c-999e-c53a49af28aa
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
-#open feign client
-restclient:
-  keycloak:
-    name: keycloak-client
-    url: http://localhost:1002
-    path: /api/keycloak
-
-logbook:
-  format:
-    style: splunk
-
-logging:
-  level:
-    oi.febrihasan.user.shared.openfeign: DEBUG
-    #set for logbook write into log
-    org.zalando.logbook: TRACE
-    
+      defaultZone: http://localhost:1000/api/eureka/
+      
 feign:
   #active openfeign fallback set true on circuit breaker and hystrix
   circuitbreaker:
@@ -64,3 +24,44 @@ hystrix:
       execution:
         timeout:
           enabled: false
+
+# keycloak config set up v10.0.2
+keycloak:
+  auth-server-url: http://localhost:8080/auth
+  realm: blu-micro
+  bearer-only: true
+  principal-attribute: preferred_username
+  ssl-required: none
+  use-resource-role-mappings: true
+  resource: blu-micro-user
+  credentials:
+    secret: 9ac51cca-0cb8-4a3c-999e-c53a49af28aa
+
+logbook:
+  format:
+    style: splunk
+
+logging:
+  level:
+    oi.febrihasan.user.shared.openfeign: DEBUG
+    #set for logbook write into log
+    org.zalando.logbook: TRACE
+
+# management
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+#open feign client
+restclient:
+  keycloak:
+    name: keycloak-client
+    url: http://localhost:1002
+    path: /api/keycloak
+
+server:
+  port: 1012
+  servlet:
+    context-path: /api
