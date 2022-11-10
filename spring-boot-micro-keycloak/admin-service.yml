@@ -7,4 +7,5 @@ eureka:
 
 server:
   port: 1003
-    context-path: /api
+    servlet:
+      context-path: /api
