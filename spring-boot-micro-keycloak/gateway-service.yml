@@ -7,8 +7,10 @@ eureka:
 
 server:
   port: 1002
-  servlet:
-    context-path: /api
+
+spring:
+  webflux:
+    base-path: /api
 
 #actuator / management
 management:
