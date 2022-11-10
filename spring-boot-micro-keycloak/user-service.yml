@@ -32,8 +32,8 @@ management:
 restclient:
   keycloak:
     name: keycloak-client
-    url: https://ait-keycloak.akarinti.tech
-    path: /realms/poc-blu
+    url: http://localhost:9090/api
+    path: /keycloak/login
 
 logbook:
   format:
