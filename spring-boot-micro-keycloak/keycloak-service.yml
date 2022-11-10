@@ -21,3 +21,13 @@ keycloak:
   resource: blu-micro-client
   credentials:
     secret: 9ac51cca-0cb8-4a3c-999e-c53a49af28aa
+
+
+logbook:
+  format:
+    style: splunk
+
+logging:
+  level:
+    #set for logbook write into log
+    org.zalando.logbook: TRACE
