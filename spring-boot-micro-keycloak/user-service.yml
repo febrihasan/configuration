@@ -1,14 +1,14 @@
 debug: true
 
 server:
-  port: 9092
+  port: 1012
   servlet:
     context-path: /api
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9091/eureka/
+      defaultZone: http://localhost:1000/eureka/
 
 # keycloak config set up v10.0.2
 keycloak:
@@ -32,7 +32,7 @@ management:
 restclient:
   keycloak:
     name: keycloak-client
-    url: http://localhost:9090
+    url: http://localhost:1002
     path: /api/keycloak
 
 logbook:
