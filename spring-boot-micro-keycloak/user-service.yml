@@ -27,3 +27,38 @@ management:
     web:
       exposure:
         include: '*'
+
+#open feign client
+restclient:
+  keycloak:
+    name: keycloak-client
+    url: https://ait-keycloak.akarinti.tech
+    path: /realms/poc-blu
+
+logbook:
+  format:
+    style: splunk
+
+logging:
+  level:
+    oi.febrihasan.user.shared.openfeign: DEBUG
+    
+feign:
+  #active openfeign fallback set true on circuit breaker and hystrix
+  circuitbreaker:
+    enabled: true
+  hystrix:
+    enabled: true
+  #client openfeign log set
+  client:
+    config:
+      keycloak:
+        loggerLevel: full
+
+#turn off time out hystrix, because for default this config if true set timeout to 15 sec, and openfeign timeout unused
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
