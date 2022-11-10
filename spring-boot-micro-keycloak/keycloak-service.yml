@@ -1,14 +1,9 @@
 debug: true
 
-server:
-  port: 1010
-  servlet:
-    context-path: /api
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1000/eureka/
+      defaultZone: http://localhost:1000/api/eureka/
 
 # keycloak config set up v10.0.2
 keycloak:
@@ -30,3 +25,8 @@ logging:
   level:
     #set for logbook write into log
     org.zalando.logbook: TRACE
+
+server:
+  port: 1010
+  servlet:
+    context-path: /api
