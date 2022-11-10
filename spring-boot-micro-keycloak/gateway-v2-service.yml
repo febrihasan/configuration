@@ -16,3 +16,27 @@ management:
     web:
       exposure:
         include: "*"
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    admin-service:
+      path: /api/admin/**
+      serviceId: admin-service
+      stripPrefix: false
+    config-service:
+      path: /api/config/**
+      serviceId: config-service
+      stripPrefix: false
+    keycloak-service:
+      path: /api/jeycloak/**
+      serviceId: keycloak-service
+      stripPrefix: false
+    user-service:
+      path: /api/user/**
+      serviceId: user-service
+      stripPrefix: false
+    transaction-service:
+      path: /api/transaction/**
+      serviceId: transaction-service
+      stripPrefix: false
