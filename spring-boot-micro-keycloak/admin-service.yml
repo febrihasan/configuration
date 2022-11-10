@@ -4,8 +4,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1000/eureka/
-
+      
 server:
   port: 1003
-    servlet:
-      context-path: /api
+  servlet:
+    context-path: /api
