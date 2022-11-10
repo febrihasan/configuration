@@ -29,7 +29,7 @@ zuul:
       serviceId: config-service
       stripPrefix: false
     keycloak-service:
-      path: /api/jeycloak/**
+      path: /api/keycloak/**
       serviceId: keycloak-service
       stripPrefix: false
     user-service:
