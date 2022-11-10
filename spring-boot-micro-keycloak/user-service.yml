@@ -42,6 +42,8 @@ logbook:
 logging:
   level:
     oi.febrihasan.user.shared.openfeign: DEBUG
+    #set for logbook write into log
+    org.zalando.logbook: TRACE
     
 feign:
   #active openfeign fallback set true on circuit breaker and hystrix
