@@ -1,0 +1,18 @@
+debug: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1000/api/eureka/
+
+server:
+  port: 1004
+  servlet:
+    context-path: /api
+
+#actuator / management
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
