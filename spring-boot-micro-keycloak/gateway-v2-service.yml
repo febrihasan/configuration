@@ -5,38 +5,38 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1000/api/eureka/
 
-server:
-  port: 1004
-  servlet:
-    context-path: /api
-
 #actuator / management
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+        
+server:
+  port: 1004
+  servlet:
+    context-path: /api
 
 zuul:
-#  ignoredServices: '*'
+  ignoredServices: '*'
   routes:
     admin-service:
-      path: /api/admin/**
+      path: "/api/admin/**"
       serviceId: admin-service
       stripPrefix: false
     config-service:
-      path: /api/config/**
+      path: "/api/config/**"
       serviceId: config-service
       stripPrefix: false
     keycloak-service:
-      path: /api/keycloak/**
+      path: "/api/keycloak/**"
       serviceId: keycloak-service
       stripPrefix: false
     user-service:
-      path: /api/user/**
+      path: "/api/user/**"
       serviceId: user-service
       stripPrefix: false
     transaction-service:
-      path: /api/transaction/**
+      path: "/api/transaction/**"
       serviceId: transaction-service
       stripPrefix: false
