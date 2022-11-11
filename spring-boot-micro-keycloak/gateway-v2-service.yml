@@ -21,7 +21,7 @@ zuul:
   ignoredServices: '*'
   routes:
     admin-service:
-      path: "/api/admin/**"
+      path: "/admin/**"
       serviceId: admin-service
       stripPrefix: false
     config-service:
