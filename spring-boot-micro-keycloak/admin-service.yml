@@ -4,7 +4,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1000/api/eureka/
-      
+
+ribbon:
+  eureka:
+    enable: true
+
 server:
   port: 1003
   servlet:
