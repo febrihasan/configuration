@@ -2,6 +2,7 @@ debug: true
 
 eureka:
   client:
+    fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:1000/api/eureka/
 
