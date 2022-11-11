@@ -5,6 +5,14 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1000/api/eureka/
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
 #actuator / management
 management:
   endpoints:
@@ -12,12 +20,19 @@ management:
       exposure:
         include: "*"
         
+ribbon:
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
+        
 server:
   port: 1004
   servlet:
     context-path: /api
 
 zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
   ignoredServices: '*'
   routes:
     admin-service:
@@ -40,3 +55,6 @@ zuul:
       path: "/api/transaction/**"
       serviceId: transaction-service
       stripPrefix: false
+  semaphore:
+    max-semaphores: 500
+  sensitive-headers: true
