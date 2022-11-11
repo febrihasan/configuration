@@ -1,0 +1,22 @@
+debug: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1000/api/eureka/
+
+server:
+  port: 1013
+  servlet:
+    context-path: /api
+
+spring:
+  webflux:
+    base-path: /api
+
+#actuator / management
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
