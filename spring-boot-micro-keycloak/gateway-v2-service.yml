@@ -58,4 +58,7 @@ zuul:
       stripPrefix: false
   semaphore:
     max-semaphores: 500
+  SendErrorFilter:
+    post:
+      disabled: true
   sensitive-headers: true
