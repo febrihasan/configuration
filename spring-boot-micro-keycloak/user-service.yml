@@ -35,7 +35,7 @@ keycloak:
   use-resource-role-mappings: true
   resource: blu-micro-user
   credentials:
-    secret: 9ac51cca-0cb8-4a3c-999e-c53a49af28aa
+    secret: e5282f33-befc-4058-86c0-d29865025606
 
 logbook:
   format:
