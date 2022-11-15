@@ -29,8 +29,8 @@ logging:
 master:
   keycloak:
     resource: admin-cli
-    username: admin
-    password: admin
+    username: admin-blu
+    password: 123456
 
 server:
   port: 1010
