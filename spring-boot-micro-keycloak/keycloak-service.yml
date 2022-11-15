@@ -26,6 +26,12 @@ logging:
     #set for logbook write into log
     org.zalando.logbook: TRACE
 
+master:
+  keycloak:
+    resource: admin-cli
+    username: admin
+    password: admin
+
 server:
   port: 1010
   servlet:
