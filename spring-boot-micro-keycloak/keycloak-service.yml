@@ -32,6 +32,13 @@ master:
     resource: admin-cli
     username: admin-blu
     password: 123456
+ 
+ restclient:
+  keycloak:
+    name: keycloak-admin
+#   url: http://localhost:8080/auth    
+    url: http://localhost:8185
+    path: /admin/realm/blu-micro
 
 server:
   port: 1010
