@@ -14,7 +14,7 @@ keycloak:
   principal-attribute: preferred_username
   ssl-required: none
   use-resource-role-mappings: true
-  resource: blu-micro-client
+  resource: blu-micro-keycloak
   credentials:
     secret: 9ac51cca-0cb8-4a3c-999e-c53a49af28aa
 
