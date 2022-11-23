@@ -33,7 +33,7 @@ master:
     username: admin-blu
     password: 123456
  
- restclient:
+restclient:
   keycloak:
     name: keycloak-admin
 #   url: http://localhost:8080/auth    
