@@ -27,7 +27,8 @@ hystrix:
 
 # keycloak config set up v10.0.2
 keycloak:
-  auth-server-url: http://localhost:8080/auth
+#  auth-server-url: http://localhost:8080/auth
+  auth-server-url: http://localhost:8185
   realm: blu-micro
   bearer-only: true
   principal-attribute: preferred_username
